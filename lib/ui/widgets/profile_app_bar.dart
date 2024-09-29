@@ -19,6 +19,12 @@ AppBar profileAppBar(context, [bool fromUpdateProfile = false]) {
             borderRadius: BorderRadius.circular(100),
             child: Image.memory(
               base64Decode(AuthController.userData?.photo ?? ''),
+              errorBuilder: (context, child, stackTrace) {
+                return const Icon(
+                  Icons.person_outline,
+                  color: AppColors.themeColor,
+                );
+              },
             ),
           ),
         ),

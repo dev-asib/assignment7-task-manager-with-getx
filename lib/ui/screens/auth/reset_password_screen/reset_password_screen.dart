@@ -50,6 +50,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                     TextFormField(
                       controller: _passwordTEController,
                       obscureText: _showPassword == false,
+                      textInputAction: TextInputAction.next,
                       decoration: InputDecoration(
                         hintText: "Password",
                         suffixIcon: IconButton(
@@ -79,6 +80,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                     TextFormField(
                       controller: _confirmPasswordTEController,
                       obscureText: _showConfirmPassword == false,
+                      textInputAction: TextInputAction.next,
                       decoration: InputDecoration(
                         hintText: "Confirm password",
                         suffixIcon: IconButton(

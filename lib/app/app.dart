@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:task_manager_app/bindings/controller_bindings.dart';
-import 'package:task_manager_app/ui/screens/auth/splash_screen.dart';
+import 'package:task_manager_app/ui/screens/splash_screen.dart';
 import 'package:task_manager_app/ui/utility/app_themes.dart';
 
 class TaskManagerApp extends StatefulWidget {

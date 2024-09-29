@@ -67,6 +67,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                   TextFormField(
                     controller: _emailTEController,
                     keyboardType: TextInputType.emailAddress,
+                    textInputAction: TextInputAction.next,
                     decoration: const InputDecoration(hintText: "Email"),
                     enabled: false,
                     validator: (String? value) {
@@ -85,6 +86,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                   ),
                   TextFormField(
                     controller: _firstNameTEController,
+                    textInputAction: TextInputAction.next,
                     decoration: const InputDecoration(hintText: "First Name"),
                     validator: (String? value) {
                       if (value?.trim().isEmpty ?? true) {
@@ -98,6 +100,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                   ),
                   TextFormField(
                     controller: _lastNameTEController,
+                    textInputAction: TextInputAction.next,
                     decoration: const InputDecoration(hintText: "last Name"),
                     validator: (String? value) {
                       if (value?.trim().isEmpty ?? true) {
@@ -111,6 +114,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                   ),
                   TextFormField(
                     controller: _mobileTEController,
+                    textInputAction: TextInputAction.next,
                     keyboardType: TextInputType.phone,
                     decoration: const InputDecoration(hintText: "Mobile"),
                     validator: (String? value) {
@@ -128,6 +132,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                   ),
                   TextFormField(
                     controller: _passwordTEController,
+                    textInputAction: TextInputAction.next,
                     keyboardType: TextInputType.visiblePassword,
                     obscureText: _showPassword == false,
                     decoration: InputDecoration(

@@ -44,6 +44,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                     const SizedBox(height: 24),
                     TextFormField(
                       controller: _emailTEController,
+                      textInputAction: TextInputAction.next,
                       keyboardType: TextInputType.emailAddress,
                       decoration: const InputDecoration(hintText: "Email"),
                       validator: (String? value) {

@@ -47,6 +47,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     const SizedBox(height: 24),
                     TextFormField(
                       controller: _emailTEController,
+                      textInputAction: TextInputAction.next,
                       keyboardType: TextInputType.emailAddress,
                       decoration: const InputDecoration(hintText: "Email"),
                       validator: (String? value) {
@@ -64,6 +65,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     const SizedBox(height: 8),
                     TextFormField(
                       controller: _passwordTEController,
+                      textInputAction: TextInputAction.next,
                       obscureText: _showPassword == false,
                       decoration: InputDecoration(
                         hintText: "Password",

@@ -47,6 +47,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     const SizedBox(height: 24),
                     TextFormField(
                       controller: _firstNameTEController,
+                      textInputAction: TextInputAction.next,
                       decoration: const InputDecoration(hintText: "First name"),
                       validator: (String? value) {
                         if (value?.trim().isEmpty ?? true) {
@@ -58,6 +59,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     const SizedBox(height: 8),
                     TextFormField(
                       controller: _lastNameTEController,
+                      textInputAction: TextInputAction.next,
                       decoration: const InputDecoration(hintText: "Last Name"),
                       validator: (String? value) {
                         if (value?.trim().isEmpty ?? true) {
@@ -69,6 +71,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     const SizedBox(height: 8),
                     TextFormField(
                       controller: _mobileEController,
+                      textInputAction: TextInputAction.next,
                       keyboardType: TextInputType.number,
                       decoration: const InputDecoration(hintText: "Mobile"),
                       validator: (String? value) {
@@ -85,6 +88,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     const SizedBox(height: 8),
                     TextFormField(
                       controller: _emailTEController,
+                      textInputAction: TextInputAction.next,
                       keyboardType: TextInputType.emailAddress,
                       decoration: const InputDecoration(hintText: "Email"),
                       validator: (String? value) {
@@ -103,6 +107,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     TextFormField(
                       obscureText: _showPassword == false,
                       controller: _passwordTEController,
+                      textInputAction: TextInputAction.next,
                       decoration: InputDecoration(
                         hintText: "Password",
                         suffixIcon: IconButton(
