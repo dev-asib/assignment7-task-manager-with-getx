@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:task_manager_app/ui/controller/auth_controller.dart';
+import 'package:task_manager_app/ui/controller/permission_handler_controller.dart';
 import 'package:task_manager_app/ui/controller/update_profile_controller.dart';
 import 'package:task_manager_app/ui/screens/update_profile_screen/custom_photo_picker.dart';
 import 'package:task_manager_app/ui/utility/app_constants.dart';
@@ -25,6 +26,12 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
+  final PermissionHandlerController _permissionHandlerController = Get.find<PermissionHandlerController>();
+
+  Future<void> _requestPermission() async{
+    _permissionHandlerController.requestPermission(context);
+  }
+
   @override
   void initState() {
     super.initState();
@@ -33,6 +40,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
     _firstNameTEController.text = userData.firstName ?? '';
     _lastNameTEController.text = userData.lastName ?? '';
     _mobileTEController.text = userData.mobile ?? '';
+    _requestPermission();
   }
 
   bool _showPassword = false;
@@ -167,8 +175,8 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                     builder: (updateProfileController) {
                       return Visibility(
                         visible:
-                            updateProfileController.updateProfileInProgress ==
-                                false,
+                        updateProfileController.updateProfileInProgress ==
+                            false,
                         replacement: const CenterdProgressIndicator(),
                         child: GetBuilder<UpdateProfileController>(
                           builder: (updateProfileController) {
@@ -186,7 +194,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                                 }
                               },
                               child:
-                                  const Icon(Icons.arrow_circle_right_outlined),
+                              const Icon(Icons.arrow_circle_right_outlined),
                             );
                           },
                         ),
@@ -204,7 +212,6 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
       ),
     );
   }
-
 
   void _profileUpdatedSuccess() {
     if (mounted) {

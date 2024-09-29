@@ -5,6 +5,7 @@ import 'package:task_manager_app/ui/controller/completed_task_controller.dart';
 import 'package:task_manager_app/ui/controller/email_verification_controller.dart';
 import 'package:task_manager_app/ui/controller/in_progress_task_controller.dart';
 import 'package:task_manager_app/ui/controller/new_task_controller.dart';
+import 'package:task_manager_app/ui/controller/permission_handler_controller.dart';
 import 'package:task_manager_app/ui/controller/pin_verification_controller.dart';
 import 'package:task_manager_app/ui/controller/reset_password_controller.dart';
 import 'package:task_manager_app/ui/controller/sign_in_controller.dart';
@@ -25,5 +26,6 @@ class ControllerBindings extends Bindings {
     Get.lazyPut(() => CancelledTaskController());
     Get.lazyPut(() => AddNewTaskController());
     Get.lazyPut(() => UpdateProfileController());
+    Get.lazyPut(() => PermissionHandlerController());
   }
 }
